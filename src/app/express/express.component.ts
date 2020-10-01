@@ -9,7 +9,7 @@ declare var require: any
 })
 export class ExpressComponent implements OnInit {
 
-  img = '../../assets/img.png'
+  public image = require('../../assets/img.png').default
 
   constructor() { }
 
