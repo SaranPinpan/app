@@ -1,0 +1,70 @@
+<style>
+    .indent {
+        text-indent: 2em;
+    }
+</style>
+<div class="display-4 text-center user-select-none">Express.js</div>
+<div class="dropdown-divider mt-3"></div>
+<div class="text-justify indent">
+    <p>
+        <b>Express.js</b>, or simply <b>Express</b>, is a back end web application framework for Node.js
+        Express has many features that helps us create a web easier such as
+        allows to set up middlewares to respond to HTTP Requests,
+        defines a routing table which is used to perform different actions based on HTTP Method and URL,
+        allows to dynamically render HTML Pages based on passing arguments to templates.
+    </p>
+</div>
+<div class="mt-4">
+    <h4>Installing Express</h4>
+    <div>Firstly, install the Express framework globally using NPM so that it can be used to create a web application using node terminal.</div>
+    <div class="card bg-dark my-2">
+        <div class="card-body">
+            <code class="text-white user-select-none">$ </code><code class="text-white">npm install express --save</code>
+        </div>
+    </div>
+    <div>You should install the following important modules along with express −</div>
+    <div class="card bg-dark my-2">
+        <div class="card-body">
+            <code class="text-white user-select-none">$ </code><code class="text-white">npm install body-parser --save</code>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h4>Hello world Example</h4>
+    <div>Following is a very basic Express app which starts a server and listens on port 8081 for connection. This app responds with Hello World! for requests to the homepage. For every other path, it will respond with a 404 Not Found.</div>
+    <div class="card bg-light my-2">
+        <div class="card-body">
+    <pre><code>
+    var express = require('express');
+    var app = express();
+
+    app.get('/', function (req, res) &#123;
+    res.send('Hello World');
+    &#125;)
+
+    var server = app.listen(8080, function () &#123;
+        var host = server.address().address
+        var port = server.address().port
+        
+        console.log("Example app listening at http://%s:%s", host, port)
+    &#125;)</code></pre>
+        </div>
+    </div>
+    <div>Save the above code in a file named <mark>server.js</mark> and run it with the following command.</div>
+    <div class="card bg-dark my-2">
+        <div class="card-body">
+            <code class="text-white user-select-none">$ </code><code class="text-white">node server.js</code>
+        </div>
+    </div>
+    <div>You will see the following output −</div>
+    <div class="card bg-dark my-2">
+        <div class="card-body">
+            <samp class="text-white user-select-none">Example app listening at http://0.0.0.0:8080</samp>
+        </div>
+    </div>
+    <div class="mb-2">Open http://127.0.0.1:8081/ in any browser to see the following result.</div>
+    <div class="row justify-content-center">
+        <img src="../../assets/hello-world.png" class="img-fluid w-75" alt="Hello World">
+    </div>
+</div>
